@@ -1,38 +1,382 @@
+/* 
+  Colour palate:
+  - Red (#FF0000)
+  - Boston University Red (#CC0000)
+  - Cerulean Blue (#3B4CCA)
+  - Golden Yellow (#FFDE00) 
+  - Gold Foil (#B3A125)
+*/
+
+/* Default React Styling */
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  /* background-color: #d61a1a;  Background styling added by us  */
+}
+
+/* Global Styling */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  background-color: #ffff;
+  size: 100px;
+  cursor: pointer;
+}
+
+/* Currently input style not working 01:41 22/06/2022 */
+input {
+  width: 800px;
+  color: black;
+  background-color: rgb(201, 221, 219);
+  padding: 14px 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border: none;
+  /* border-radius: 4px; */
+}
+
+select {
+  width: 800px;
+  color: black;
+  background-color: rgb(201, 221, 219);
+  padding: 14px 20px;
+  margin-bottom: 25px;
+  border: none;
+  /* border-radius: 4px; */
+}
+h2 {
+  margin-bottom: 10px;
+}
+p {
+  margin-bottom: 10px;
+}
+
+/* Navigation Bar Styles */
+
+.poke-ball-logo {
+  width: 45px;
+}
+
+.nav-bar-logo {
+  float: left;
+}
+
+.nav-bar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3B4CCA;
+  width: 100%;
+  /* updates */
+  position: sticky;
+  top: 0;
+}
+
+.nav-bar-item {
+  float: right;
+}
+
+li a {
+  display: block;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  color: #FFDE00;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Pokemon Styling */
+
+/* .pokemon {
+  background-color: #eee;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  padding: 1rem;
+  margin: 0.5rem;
+  flex: 1 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem; Adds small margin around boxes ... can be kept or not
+} */
+
+/* .pokemon_parent_container {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  margin: 1rem 3rem;
+  padding: 2rem;  
+  border-radius: 1rem;
+  background-color: #3B4CCA;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  min-height: 760px; Fixes page not filling issue
+} */
+
+/* STYLING ON WEDNESDAY */
+
+/* FORM STYLING */
+.form-gymLeader {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+  background-color: #cc773f;
+  padding: 2rem;
+  margin: 50px;
+  border-radius: 5px;
+  width: 90%;
 }
+
+.form-gym {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+  background-color: #a47329;
+  padding: 2rem;
+  margin: 50px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.form-pokemon {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+  background-color: #3B4CCA;
+  padding: 2rem;
+  margin: 50px;
+  border-radius: 5px;
+  min-width: 1800px;
+}
+
+.form-trainer {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+  background-color: #8b52ac;
+  padding: 2rem;
+  margin: 50px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+/* CONTAINERS */
+
+.pokemon {
+  background-color: #eee;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  padding: 1rem;
+  margin: 0.5rem;
+  flex: 1 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0.3rem; Adds small margin around boxes ... can be kept or not */
+}
+
+.pokemon_parent_container {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  margin: 1rem 3rem;
+  padding: 2rem;  
+  border-radius: 1rem;
+  background-color: #3B4CCA;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  min-height: 760px; /* Fixes page not filling issue */
+}
+
+.trainer {
+  background-color: #eee;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  padding: 1rem;
+  margin: 0.5rem;
+  flex: 1 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0.3rem; Adds small margin around boxes ... can be kept or not */
+}
+
+.trainer_parent_container {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  margin: 1rem 3rem;
+  padding: 2rem;  
+  border-radius: 1rem;
+  background-color: #c5c5c5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-height: 760px; /* Fixes page not filling issue */
+}
+
+.gym {
+  background-color: #eee;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  padding: 1rem;
+  margin: 0.5rem;
+  flex: 1 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0.3rem; Adds small margin around boxes ... can be kept or not */
+}
+
+.gym_parent_container {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  margin: 1rem 3rem;
+  padding: 2rem;  
+  border-radius: 1rem;
+  background-color: #c5c5c5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-height: 760px; /* Fixes page not filling issue */
+}
+
+.gymLeader {
+  background-color: #eee;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  padding: 1rem;
+  margin: 0.5rem;
+  flex: 1 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0.3rem; Adds small margin around boxes ... can be kept or not */
+}
+
+.gymLeader_parent_container {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  margin: 1rem 3rem;
+  padding: 2rem;  
+  border-radius: 1rem;
+  background-color: #c5c5c5;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-height: 760px; /* Fixes page not filling issue */
+}
+
+/* Home Page */
+
+#ash{
+  width: 100px;
+}
+
+#ash-div{
+  display: flex;
+  box-shadow: 0.2rem 0.5rem 2rem;
+  margin: 1rem 3rem;
+  padding: 2rem;  
+  border-radius: 1rem;
+  background-color: #ffffbf;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100%;
+}
+
+#ash-info{
+  margin-top: 0%;
+}
+
+#brock{
+  width: 200px;
+}
+
+#brock-div{
+  display: flex;
+  display: flex;
+  box-shadow: 0.2rem 0.5rem 2rem;
+  margin: 1rem 3rem;
+  padding: 2rem;  
+  border-radius: 1rem;
+  background-color: #ffffbf;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100%;
+}
+
+#brock-info{
+  margin-top: 0%;
+}
+
+#misty{
+  width: 150px;
+}
+
+#misty-div{
+  display: flex;
+  display: flex;
+  box-shadow: 0.2rem 0.5rem 2rem;
+  margin: 1rem 3rem;
+  padding: 2rem;  
+  border-radius: 1rem;
+  background-color: #ffffbf;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100%;
+}
+
+#misty-info{
+  margin-top: 0%;
+}
+
+.about-article {
+  box-shadow: 0.2rem 0.5rem 2rem;
+  margin: 1rem 3rem;
+  padding: 2rem;  
+  border-radius: 1rem;
+  background-color: #ffffbf;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100%;
+}
+
+.h1_home_about {
+  margin-bottom: 25px;
+  font-size: 3rem;
+}
+

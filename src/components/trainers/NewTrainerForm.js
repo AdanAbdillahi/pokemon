@@ -33,6 +33,7 @@ const NewTrainerForm = ({postTrainer}) => {
         />
       </p>
       <p>Enter DOB (YYYY-MM-DD): 
+        <br/>
           <input 
           type="text"
           placeholder="date of birth"
